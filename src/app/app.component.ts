@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'UD35-2';
-}
+
+  nombre:string='';
+  mail:string='';
+  mensaje:string='';
+
+  mostratForm(form:any){
+    this.nombre=form.nombre;
+    this.mail=form.mail;
+    this.mensaje=form.mensaje;
+  }
+;}

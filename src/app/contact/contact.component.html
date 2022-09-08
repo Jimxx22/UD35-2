@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Formulario Contacto</h1>
+    <div class="row">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInputGridNombre" placeholder="Nombre y apellidos" #nombre/>
+        <label for="floatingInputGridNombre">Nombre</label>
+      </div>
+      <p class="err">{{errorNom}}</p>
+    </div>
+
+    <div class="row">
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInputGridEmail" placeholder="ejemplo@dominio.com" #mail/>
+        <label for="floatingInputGridEmail">Email</label>
+      </div>
+      <p class="err">{{errorMail}}</p>
+    </div>
+
+    <div class="row">
+      <div class="form-floating">
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="mensaje" style="height: 200px" #mensaje></textarea>
+        <label for="exampleFormControlTextarea1">Mensaje</label>
+      </div>
+      <p class="err">{{errorMen}}</p>
+    </div>
+
+    <div class="row">
+      <div class="form-floating">
+        <input type="number" class="form-control" id="floatingInputGridValidacion" placeholder="Respuesta" #validacion/>
+        <label for="floatingInputGridValidacion">{{op}}</label>
+      </div>
+      <p class="err">{{errorVal}}</p>
+    </div>
+
+    <div class="row justify-content-md-end">
+      <input class="btn btn-primary save col-1" type="button" value="Enviar" (click)="guardarForm(nombre.value, mail.value, mensaje.value, validacion.value)">
+    </div>
+</div>
+
